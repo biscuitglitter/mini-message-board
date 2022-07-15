@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+
+  each message in messages
+    p= message.text
+    p= "-- " + message.user
+    p= "message sent on " + message.added  
+    hr(color="black")
+    br
+  
+  a(href="/new") add a message
